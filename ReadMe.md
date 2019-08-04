@@ -5,7 +5,7 @@ Sample_Superstore.xls -> Dataset
 ## EDA
 Project EDA.ipynb -> Exploratory Data Analysis (EDA)
 
-# Classical Time-Series Forecasting Methods
+## Classical Time-Series Forecasting Methods
 1.	Project SARIMA.ipynb - > Sales forecasting with
   1.1 ARMA method
   1.2 ARIMA method
