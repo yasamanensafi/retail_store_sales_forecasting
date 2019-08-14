@@ -1,7 +1,7 @@
 <span style = "font-family: Calibri; font-size:4em;">
 
 ## Dataset
-Sample_Superstore.xls -> Dataset
+MRP_data.xls -> Dataset
 ## EDA
 Project EDA.ipynb -> Exploratory Data Analysis (EDA)
 
@@ -28,7 +28,7 @@ Project EDA.ipynb -> Exploratory Data Analysis (EDA)
   3.2 Prophet method with holidays
 
 ## Artificial Neural Networks - LSTM Time-Series Forecasting Method
-4.	Project Vanilla Stacked LSTM.ipynb and Project LSTM.ipynb -> Sales forecasting with 
+4.	Project Vanilla Stacked LSTM.ipynb, Project LSTM.ipynb, and Project CNN.ipynb -> Sales forecasting with 
 
   4.1 Vanilla LSTM
   
@@ -36,7 +36,9 @@ Project EDA.ipynb -> Exploratory Data Analysis (EDA)
   
   4.3 Bidirectional LSTM
   
-  4.4 LSTM2
+  4.4 LSTM
+  
+  4.5 CNN
   
  ## The Complete Project with Results graphs and tables
  
