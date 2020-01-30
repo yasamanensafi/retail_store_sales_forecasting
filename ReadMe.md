@@ -5,6 +5,12 @@ MRP_data.xls -> Dataset
 ## EDA
 Project EDA.ipynb -> Exploratory Data Analysis (EDA)
 
+ ## The Complete Project with Results (graphs and tables included)
+ 
+Final Project.ipynb
+
+# This project consists of:
+
 ## Classical Time-Series Forecasting Methods
 
   1.1 ARMA method
@@ -35,7 +41,3 @@ Project EDA.ipynb -> Exploratory Data Analysis (EDA)
   4.4 LSTM
   
   4.5 CNN
-  
- ## The Complete Project with Results graphs and tables
- 
-Final Project.ipynb
