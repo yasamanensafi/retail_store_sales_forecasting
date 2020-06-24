@@ -4,6 +4,7 @@ In recent years, there has been growing interest in the field of Neural Networks
 I began with some classical time- series forecasting methods like Seasonal ARIMA and Triple Exponential Smoothing. Then I tested more current methods like Prophet, Long Short-Term Memory (LSTM), and Convolutional Neural Network (CNN). 
 The whole process of furniture forecasting has been described by the following figure.
 ![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/1.png)
+
 ##  The  Dataset
 The dataset used for this project describes Superstore Sales from 2014 to the end of 2017 and it contains nearly 10,000 observations and 21 features. This dataset consists of sales information of three different categories, furniture, technology, and office supplies. In this project, the sales of furniture is the variable of interest because it contains seasonal patterns.
 This dataset is publicly available and the most important features for performing univariate forecasting are sales and order date of each data point.  Some of the other features are: Order ID, Order Date, Ship Date, Ship Mode, Customer ID, Customer Name, Segment, Country, City, State, Postal Code, Region, Category, Sub-Category, Product Name, Sales, Quantity, Discount, Profit. 
@@ -16,7 +17,10 @@ For the task of  time-series forecasting we cannot divide the dataset to train s
 ###  **1.0-sales-forecasting-EDA.ipynb**
 In order to gain a better insight of the dataset and to be able to predict future sales more accurate, it has been divided to three parts based on product categories, which are furniture, technology products, and office supplies. Then, the sales data has been aggregated by order date. 
 In the next step, the data has been resampled on monthly frequency and averages daily sales value has been used. In addition, the start of the month has been set as the index. 
-![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/23.png)As it can be seen from the above figure, the furniture sales graph shows seasonality in its pattern. The amount of sales is low at the start of each year and it increases at the end of the year. 
+
+![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/23.png)
+
+As it can be seen from the above figure, the furniture sales graph shows seasonality in its pattern. The amount of sales is low at the start of each year and it increases at the end of the year. 
 One of the main goals of this project is to investigate the performance of different forecasting methods on seasonal items and for this reason, the furniture products are going to be the chosen category for the task of prediction. 
 ### **2.0-sales-forecasting-ARIMA-family.ipynb**
 In this notebook, ARMA, ARIMA, and SARIMA methods are implemented using statsmodels library.
@@ -28,7 +32,9 @@ Autoregressive Integrated Moving Average (ARIMA) is one of the most commonly use
 
 #### SARIMA
 For predicting a seasonal time-series, Seasonal ARIMA or SARIMA model is used and it is denoted by SARIMA(*p, d, q*)(*P,D,Q*)*m*, where *p*, *d*, and *q* are non-seasonal and *P*, *D*, and *Q* are seasonal parameters and receptively they present order of the autoregressive part, degree of the first differencing, and order of the moving average part. In addition, the seasonal parameter *m* can be defined as the length of the cycle or in other words, the number of periods per season. This number can be found from the peaks of the ACF plots. As it has been shown in the following figure.
+
 ![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/2.png)
+
 The method for identifying the optimal parameters is called the Grid Search method. Grid search will find the best hyper-parameters of the model by searching over the set of possible parameters and comparing the Akaike information criterion (AIC) and Bayesian information criterion (BIC) which are the estimators that can indicate the quality of the model. 
 After finding all the parameters, the model can be created and fit on the training data and then can be used to make a prediction. After applying Grid search method, the best hyper-parameters for ARIMA and Seasonal ARIMA have been indicated as (6,0,0) and (0, 0, 0)  x  (1, 1, 0, 12) respectively.
 ### **3.0-sales-forecasting-exponential-smoothing.ipynb**
@@ -53,9 +59,9 @@ The result from previous CNN will be fed into the next CNN layer. Followed by th
 ### **7.0-sales-forecasting-final-all-models-in-one.ipynb**
 In this notebook, by implementing all of the previous models, the effectiveness of Neural Network methods on forecasting  seasonal items has been explored and the results have been compared to each other. 
 The following figure illustrates the predicted results of the best models from each forecasting technique. 
-![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/all%20models%20zoom.png)
 They have produced mixed results in the sales prediction for the beginning of the year but all of them could capture the growth in the sales at the end of the year 2017.
-all models zoom
+
+![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/all%20models%20zoom.png)
 
 The following table shows the MSE, RMSE, and MAPE values for all of the models. As can be seen, the first SARIMA model outperformed other classical methods in terms of forecasting accuracy in different performance measurements. Furthermore, the holiday factor has improved the forecasting accuracy of the second Prophet model compared with the first model and also it has been performed better than the SARIMA model. 
 Among the Neural networks models, the results show the good performance of Stacked LSTM, Vanilla LSTM, and CNN models compared with other methods. The results also indicate the superiority of Stacked LSTM over other methods with the MAPE value of 17.34 and the RMSE value of 128.51.
