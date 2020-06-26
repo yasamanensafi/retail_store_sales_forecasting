@@ -1,8 +1,9 @@
 # Neural Network Approach for Seasonal Items Forecasting of a Retail Store
 ## Context
 In recent years, there has been growing interest in the field of Neural Networks. However, research into seasonal time-series forecasting, which has many real-world applications, has produced varied results. In this repository, the performance of Neural Network methods in seasonal time-series forecasting has been compared with other methods. 
-I began with some classical time- series forecasting methods like Seasonal ARIMA and Triple Exponential Smoothing. Then I tested more current methods like Prophet, Long Short-Term Memory (LSTM), and Convolutional Neural Network (CNN). 
-The whole process of furniture forecasting has been described by the following figure.
+I began with some classical time-series forecasting methods like Seasonal ARIMA and Triple Exponential Smoothing. Then I tested more current methods like Prophet, Long Short-Term Memory (LSTM), and Convolutional Neural Network (CNN). 
+The process is illustrated below.
+
 ![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/1.png)
 
 ##  The  Dataset
@@ -20,7 +21,7 @@ In the next step, the data has been resampled on monthly frequency and averages 
 
 ![enter image description here](https://raw.githubusercontent.com/yasamanensafi/retail_store_sales_forecasting/master/img/23.png)
 
-As it can be seen from the above figure, the furniture sales graph shows seasonality in its pattern. The amount of sales is low at the start of each year and it increases at the end of the year. 
+As it can be seen from the above figure, the furniture sales graph shows seasonality in its pattern. Sales volume is low at the start of each year and it increases at the end of the year.
 One of the main goals of this project is to investigate the performance of different forecasting methods on seasonal items and for this reason, the furniture products are going to be the chosen category for the task of prediction. 
 ### **2.0-sales-forecasting-ARIMA-family.ipynb**
 In this notebook, ARMA, ARIMA, and SARIMA methods are implemented using statsmodels library.
